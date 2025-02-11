@@ -1,0 +1,131 @@
+
+    /* General styles */
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 0;
+        background-color: rgb(30, 29, 29);
+        background-repeat: repeat;
+    }
+
+    .container-fluid {
+        margin-right: 10%;
+    }
+
+    /* Header styles */
+    #header {
+        background-color: #333;
+        color: #7b7676;
+    }
+
+    /* NavBar styles */
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
+    }
+
+    .navbar-nav .nav-link {
+        color: #7b7676;
+        margin-right: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #7b7676;
+    }
+
+    /* Section styles */
+    section {
+        padding: 1.5rem 0;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: large;
+        color: #FFFFFF;
+        text-shadow: 3px 5px 2px #474747;
+        text-align: center;
+        border: #aa9898 1px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Carousel Container */
+    .carousel-container {
+        width: 500px; /* Adjust as needed */
+        margin: 20px auto; /* Center the carousel */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent images from wrapping */
+        /* Optional: Style the scrollbar */
+        scrollbar-width: thin; /* For Firefox */
+        -webkit-overflow-scrolling: touch; /* For iOS Safari */
+    }
+
+    /* Optional: Style the scrollbar (WebKit browsers like Chrome, Safari) */
+    .carousel-container::-webkit-scrollbar {
+        height: 8px; /* Height of the scrollbar */
+    }
+
+    .carousel-container::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Color of the track */
+    }
+
+    .carousel-container::-webkit-scrollbar-thumb {
+        background: #888; /* Color of the thumb */
+        border-radius: 4px; /* Rounded corners for the thumb */
+    }
+
+    .carousel-item {
+        display: inline-block; /* Arrange items horizontally */
+        margin-right: 10px; /* Spacing between items */
+    }
+
+    .carousel-item img {
+        max-width: 700px; /* Adjust image width as needed */
+        height: auto;
+    }
+
+    .carousel-item button {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent background */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Sale Item Grid */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .item {
+        width: 30%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+/* FAQs */
+.faqSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust as needed */
+}
