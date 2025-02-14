@@ -11,73 +11,7 @@
 
 
     <style>
-        /* Basic carousel styling - you'll likely want to refine this */
-        .carousel-container {
-            width: 80%;
-            /* Adjust as needed */
-            margin: 20px auto;
-        }
-
-        .carousel-inner {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            /* Enables snapping to slides */
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            /* Each item takes full width */
-            scroll-snap-align: start;
-            /* Snaps to the start of each item */
-            position: relative;
-            /* For positioning buttons */
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            /* Prevents small gap below image */
-        }
-
-        .carousel-item button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* Center the button */
-        }
-
-        /* Style for FAQ answer */
-        #faqAnswer {
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-
-        .row {
-            display: flex;
-            justify-content: center;
-        }
-
-        .col {
-            margin: 10px;
-        }
-
-         /* Media Query for Mobile Responsiveness */
-        @media (max-width: 768px) { /* Adjust breakpoint as needed */
-            .carousel-container {
-                width: 100%; /* Full width on smaller screens */
-            }
-
-            .col-md-4 {
-                width: 100%; /* Stack columns on smaller screens */
-            }
-            .col-sm-6{
-                width: 100%;
-            }
-        }
+       
     </style>
 
 </head>
@@ -88,8 +22,7 @@
             <div class="container-fluid m-0">
                 <a class="navbar-brand" href="main-nav">
                     <img src="https://cdn-icons-png.flaticon.com/512/882/882831.png" alt="header img" width="50"
-                        height="50" class="d-inline-block align-text-left">
-                    Capture Life. In Style.
+                        height="50" class="d-inline-block align-text-left"> Capture Life. In Style.</a>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"
@@ -129,7 +62,7 @@
                 <button onclick="location.href='#accessories'">Accessories</button>
             </div>
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1532795986-dbef1643a596?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FtZXJhJTIwc2FsZXxlbnwwfDB8MHx8fDI%3D"
+                <img src="https://images.unsplash.com/photo-1587802659513-7748a6e21f0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHNhbGUlMjByZWR8ZW58MHwwfDB8fHww"
                     alt="Image 3">
                 <button onclick="location.href='#sale'">Sale</button>
             </div>

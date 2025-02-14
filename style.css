@@ -1,131 +1,357 @@
+/* General styles */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    background-color: rgb(30, 29, 29);
+    background-repeat: repeat;
+}
 
-    /* General styles */
-    body {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin: 0;
-        background-color: rgb(30, 29, 29);
-        background-repeat: repeat;
-    }
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #d0c9c9; 
+    line-height: 1.2;
+    letter-spacing: -0.02em; 
+    margin-bottom: 1rem;
+    text-align: center; 
+    position: relative; /* Needed for positioning the underline */
+    padding-bottom: 0.7rem; /* Space for the underline and some padding */
+    
+}
 
-    .container-fluid {
-        margin-right: 10%;
-    }
+.container-fluid {
+    margin-right: 10%;
+}
 
-    /* Header styles */
-    #header {
-        background-color: #333;
-        color: #7b7676;
-    }
+/* Header styles */
+#header {
+    background-color: #333;
+    color: #7b7676;
+    text-transform: capitalize;
+}
 
-    /* NavBar styles */
+/* NavBar styles */
+.navbar-brand {
+    font-size: 2.2rem;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+.navbar-brand {
+    font-size: 5vw;
+    /* Font size is 3% of the viewport width */
+    font-style: italic;
+}
+
+/* Media query to set a maximum font size */
+@media (min-width: 1000px) {
     .navbar-brand {
-        font-size: 1.2rem;
+        font-size: 2.2rem;
+        /* Cap the font size on larger screens */
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-nav .nav-link {
+    color: #7b7676;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #7b7676;
+}
+
+/* Section styles */
+section {
+    padding: 1.5rem 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: large;
+    color: #FFFFFF;
+    text-shadow: 3px 5px 2px #474747;
+    text-align: center;
+    border: #aa9898 1px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 600px;
+    margin: 20px auto;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    scrollbar-width: thin;
+    /* For Firefox */
+    -webkit-overflow-scrolling: touch;
+    /* For iOS Safari */
+}
+
+.carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.carousel-item {
+    display: inline-block;
+    margin-right: 10px;
+        min-width: 100%;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-item button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sale Item Grid */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Important for wrapping to new rows */
+    justify-content: center;
+    /* Center the grid items */
+}
+
+.item {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* Style for FAQ answer */
+#faqAnswer {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    margin: 10px;
+}
+
+/* Very Small Screens (Phones - typically below 576px) */
+@media (max-width: 430px) {
+
+    /* Styles for small screens */
+    .container {
+        width: 100%;
+        /* Full width container */
+        padding: 10px;
     }
 
-    .navbar-toggler {
-        border: none;
-        outline: none;
+    .col-sm-6,
+    .col-md-4,
+    .col-lg-3 {
+        width: 100%;
+        /* Stack columns */
     }
 
-    .navbar-nav .nav-link {
-        color: #7b7676;
-        margin-right: 1.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: #7b7676;
-    }
-
-    /* Section styles */
-    section {
-        padding: 1.5rem 0;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        font-size: large;
-        color: #FFFFFF;
-        text-shadow: 3px 5px 2px #474747;
-        text-align: center;
-        border: #aa9898 1px;
-        margin-left: 20%;
-        margin-right: 20%;
+    /* Example: Make headings smaller */
+    h1 {
+        font-size: 1.5rem;
     }
 
     h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
     }
 
-    /* Carousel Container */
+    /* Example: Adjust navigation */
+    .navbar-nav {
+        flex-direction: column;
+        /* Vertical navigation */
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
     .carousel-container {
-        width: 500px; /* Adjust as needed */
-        margin: 20px auto; /* Center the carousel */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent images from wrapping */
-        /* Optional: Style the scrollbar */
-        scrollbar-width: thin; /* For Firefox */
-        -webkit-overflow-scrolling: touch; /* For iOS Safari */
+        width: 100%;
+        /* Full width for mobile */
     }
 
-    /* Optional: Style the scrollbar (WebKit browsers like Chrome, Safari) */
-    .carousel-container::-webkit-scrollbar {
-        height: 8px; /* Height of the scrollbar */
-    }
-
-    .carousel-container::-webkit-scrollbar-track {
-        background: #f1f1f1; /* Color of the track */
-    }
-
-    .carousel-container::-webkit-scrollbar-thumb {
-        background: #888; /* Color of the thumb */
-        border-radius: 4px; /* Rounded corners for the thumb */
-    }
-
-    .carousel-item {
-        display: inline-block; /* Arrange items horizontally */
-        margin-right: 10px; /* Spacing between items */
-    }
-
-    .carousel-item img {
-        max-width: 700px; /* Adjust image width as needed */
-        height: auto;
-    }
-
-    .carousel-item button {
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Semi-transparent background */
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    /* Sale Item Grid */
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-
-    .item {
-        width: 30%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-/* FAQs */
-.faqSelect {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Adjust as needed */
 }
+
+/* Small Screens (Phones - 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Styles for small screens */
+    .container {
+        max-width: 540px;
+        padding: 15px;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .col-md-4,
+    .col-lg-3 {
+        width: 100%;
+        /* Stack columns */
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    .carousel-container {
+        width: 100%;
+        /* Full width for mobile */
+    }
+}
+
+/* Medium Screens (Tablets - 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Styles for medium screens */
+    .container {
+        max-width: 720px;
+        padding: 20px;
+    }
+
+    .col-md-4 {
+        width: 33.33%;
+    }
+
+    .col-lg-3 {
+        width: 50%;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    .carousel-container {
+        width: 100%;
+        /* Full width for mobile */
+    }
+}
+
+/* Large Screens (Desktops - 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    /* Styles for large screens */
+    .container {
+        max-width: 960px;
+        padding: 25px;
+    }
+
+    .col-lg-3 {
+        width: 25%;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex;
+    }
+
+    .carousel-container {
+        width: 80%;
+        /* Adjust as needed */
+    }
+}
+
+/* Extra Large Screens (Large Desktops - 1200px and up) */
+@media (min-width: 1200px) {
+
+    /* Styles for extra large screens */
+    .container {
+        max-width: 1140px;
+        padding: 30px;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex;
+    }
+
+    .carousel-container {
+        width: 80%;
+        /* Adjust as needed */
+    }
+}
+
+/* Example: Adjustments for all screen sizes */
+body {
+    font-size: 16px;
+    /* Default font size */
+}
+
+img {
+    max-width: 100%;
+    /* Make images responsive */
+    height: auto;
+}
+
